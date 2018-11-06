@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/szfangzi/vvvui/issues"
   },
-  "homepage": "https://github.com/szfangzi/vvvui#readme"
+  "homepage": "https://github.com/szfangzi/vvvui#readme",
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
 }
