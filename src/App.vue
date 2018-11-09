@@ -1,5 +1,9 @@
 <template>
-  <v-button></v-button>
+  <div>
+  <v-button icon="arrow-down">确定</v-button>
+  <v-button icon="arrow-up" icon-position="left">确定2</v-button>
+  <v-button icon="arrow-right" icon-position="right">确定3</v-button>
+</div>
 </template>
 
 <script>
@@ -9,6 +13,7 @@
 </script>
 
 <style>
+  
   * {  padding: 0;  margin: 0;  box-sizing: border-box;  font-weight: normal;}
   a {  text-decoration: none;}
   .clearfix:before,.clearfix:after {  content: ' ';  display: table;}
@@ -41,4 +46,5 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
 </style>

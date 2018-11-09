@@ -1,14 +1,26 @@
 <template>
-  <button class="v-button">确定</button>
+  <button class="v-button" :class="[`icon-${iconPosition}`]"><v-icon :name="icon"></v-icon><div class="v-button-content"><slot></slot></div></button>
 </template>
 
 <script>
   export default {
-
+    props:{
+      icon:{}, 
+      iconPosition:{
+        type:String,
+        default:'left',
+        validator(val){
+          return val === 'left' || val === 'right';
+        }
+      }
+    },
+    created () {
+      console.log(this.iconPosition);
+    }
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .v-button {
     font-size: var(--font-size);
     height: var(--button-height);
@@ -33,24 +45,15 @@
     outline: none;
   }
 
-  >&-content {
+  > .v-button-content {
     order: 2;
   }
 
-  >.icon {
-    order: 1;
-    margin-right: .1em;
-  }
-
-  &.icon-right>&-content {
+  &.icon-right > .v-button-content {
     order: 1;
   }
 
-  &.icon-right>.icon {
-    order: 2;
-    margin-right: 0;
-    margin-left: .1em;
-  }
+  
 
    .loading {
     animation: spin 2s infinite linear;
