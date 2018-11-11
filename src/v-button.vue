@@ -1,21 +1,36 @@
 <template>
-  <button class="v-button" :class="[`icon-${iconPosition}`]"><v-icon :name="icon"></v-icon><div class="v-button-content"><slot></slot></div></button>
+  <button class="v-button" :class="[`icon-${iconPosition}`]" @click="$emit('click')">
+    <v-icon v-if="loading" name="loading"></v-icon>
+    <v-icon v-if="!loading && icon" :name="icon"></v-icon>
+    <div class="v-button-content">
+      <slot />
+    </div>
+  </button>
 </template>
 
 <script>
   export default {
-    props:{
-      icon:{}, 
-      iconPosition:{
-        type:String,
-        default:'left',
-        validator(val){
+    props: {
+      icon: {},
+      loading: {
+        type: Boolean,
+        default: false
+      },
+      iconPosition: {
+        type: String,
+        default: 'left',
+        validator(val) {
           return val === 'left' || val === 'right';
         }
       }
     },
-    created () {
-      console.log(this.iconPosition);
+    created() {
+
+    },
+    methods:{
+      clickHandler(){
+  
+      }
     }
   }
 </script>
@@ -33,30 +48,28 @@
     align-items: center;
     vertical-align: middle;
 
-  &:hover {
-    border-color: var(--border-color-hover);
-  }
+    &:hover {
+      border-color: var(--border-color-hover);
+    }
 
-  &:active {
-    background-color: var(--button-active-bg);
-  }
+    &:active {
+      background-color: var(--button-active-bg);
+    }
 
-  &:focus {
-    outline: none;
-  }
+    &:focus {
+      outline: none;
+    }
 
-  > .v-button-content {
-    order: 2;
-  }
+    >.v-button-content {
+      order: 2;
+    }
 
-  &.icon-right > .v-button-content {
-    order: 1;
-  }
+    &.icon-right>.v-button-content {
+      order: 1;
+    }
 
-  
 
-   .loading {
-    animation: spin 2s infinite linear;
-  }
+
+
   }
 </style>
