@@ -4,6 +4,7 @@
 
 <script>
   export default {
+    name:'v-icon',
     props:{
       name:{
 
@@ -17,6 +18,7 @@
   width: 1em;
   height: 1em;
   margin-right: .1em;
+  order: 1;
 }
 .icon-right > .icon {
     order: 2;

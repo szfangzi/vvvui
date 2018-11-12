@@ -9,7 +9,12 @@
 </template>
 
 <script>
+  import Icon from './v-icon.vue';
+
   export default {
+    components:{
+      'v-icon':Icon
+    },
     props: {
       icon: {},
       loading: {
