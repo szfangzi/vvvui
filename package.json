@@ -1,11 +1,14 @@
 {
   "name": "vvvui",
-  "version": "0.0.1",
+  "version": "0.0.11",
   "description": "这是一个UI框架",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "dev-test": "parcel watch test/* --no-cache & karma start",
-     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
+    "start":"npx parcel index.html --no-cache",
+    "t1": "parcel watch test/* --no-cache",
+    "t2": "karma start",
+    "build": "npx parcel build index.js --no-cache --no-minify",
+    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
   },
   "repository": {
     "type": "git",

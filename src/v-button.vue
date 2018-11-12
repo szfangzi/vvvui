@@ -10,7 +10,7 @@
 
 <script>
   import Icon from './v-icon.vue';
-console.log(1);
+
   export default {
     components:{
       'v-icon':Icon

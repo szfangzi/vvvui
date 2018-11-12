@@ -25,4 +25,18 @@
     margin-right: 0;
     margin-left: .1em;
   }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .loading {
+    animation: spin 2s infinite linear;
+  }
 </style>

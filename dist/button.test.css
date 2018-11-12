@@ -1,0 +1,50 @@
+
+.icon[data-v-91b0e2] {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.1em;
+  order: 1;
+}
+.icon-right > .icon[data-v-91b0e2] {
+  order: 2;
+  margin-right: 0;
+  margin-left: 0.1em;
+}
+@keyframes spin-data-v-91b0e2 {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+.loading[data-v-91b0e2] {
+  animation: spin-data-v-91b0e2 2s infinite linear;
+}
+.v-button[data-v-60da83] {
+  font-size: var(--font-size);
+  height: var(--button-height);
+  padding: 0 1em;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  background: var(--button-bg);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+.v-button[data-v-60da83]:hover {
+  border-color: var(--border-color-hover);
+}
+.v-button[data-v-60da83]:active {
+  background-color: var(--button-active-bg);
+}
+.v-button[data-v-60da83]:focus {
+  outline: none;
+}
+.v-button > .v-button-content[data-v-60da83] {
+  order: 2;
+}
+.v-button.icon-right > .v-button-content[data-v-60da83] {
+  order: 1;
+}
